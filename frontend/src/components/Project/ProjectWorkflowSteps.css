@@ -1,0 +1,135 @@
+/* 项目工作流步骤组件样式优化 */
+
+/* 步骤组件整体样式 */
+.workflow-steps {
+  /* 确保步骤标题清晰可读 */
+}
+
+.workflow-steps .ant-steps-item-title {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  margin-bottom: 4px !important;
+}
+
+.workflow-steps .ant-steps-item-description {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  margin-top: 4px !important;
+  color: #666 !important;
+}
+
+/* 状态标签样式 */
+.workflow-steps .ant-tag {
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  line-height: 1.2 !important;
+  border-radius: 4px !important;
+  margin-top: 2px !important;
+}
+
+/* 进度条样式 */
+.workflow-steps .ant-progress {
+  margin-top: 4px !important;
+}
+
+.workflow-steps .ant-progress-line {
+  font-size: 11px !important;
+}
+
+/* 步骤图标样式 */
+.workflow-steps .ant-steps-item-icon {
+  margin-right: 8px !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .workflow-steps .ant-steps-item-title {
+    font-size: 12px !important;
+  }
+  
+  .workflow-steps .ant-steps-item-description {
+    font-size: 11px !important;
+  }
+  
+  .workflow-steps .ant-tag {
+    font-size: 10px !important;
+    padding: 1px 4px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .workflow-steps .ant-steps {
+    flex-direction: column !important;
+  }
+  
+  .workflow-steps .ant-steps-item {
+    margin-bottom: 16px !important;
+  }
+}
+
+/* 状态颜色增强 */
+.workflow-steps .step-title-completed {
+  color: #52c41a !important;
+  font-weight: 600 !important;
+}
+
+.workflow-steps .step-title-in-progress {
+  color: #1890ff !important;
+  font-weight: 600 !important;
+}
+
+.workflow-steps .step-title-error {
+  color: #ff4d4f !important;
+  font-weight: 600 !important;
+}
+
+.workflow-steps .step-title-pending {
+  color: #8c8c8c !important;
+  font-weight: 500 !important;
+}
+
+/* 时间信息样式 */
+.workflow-steps .step-time-info {
+  font-size: 11px !important;
+  color: #999 !important;
+  margin-top: 4px !important;
+  line-height: 1.2 !important;
+}
+
+/* 错误提示样式 */
+.workflow-steps .ant-alert {
+  border-radius: 6px !important;
+}
+
+.workflow-steps .ant-alert-warning {
+  background-color: #fffbe6 !important;
+  border: 1px solid #ffe58f !important;
+}
+
+/* 加载状态样式 */
+.workflow-steps .ant-spin-container {
+  min-height: 200px !important;
+}
+
+/* 步骤点击效果 */
+.workflow-steps .ant-steps-item-container {
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.workflow-steps .ant-steps-item-container:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 禁用状态 */
+.workflow-steps .ant-steps-item-disabled .ant-steps-item-container {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+.workflow-steps .ant-steps-item-disabled .ant-steps-item-container:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}

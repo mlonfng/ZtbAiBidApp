@@ -1,0 +1,248 @@
+.App {
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 项目特定样式 */
+.project-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.template-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.template-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.agent-status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.agent-status-active {
+  background-color: #52c41a;
+}
+
+.agent-status-inactive {
+  background-color: #d9d9d9;
+}
+
+.agent-status-error {
+  background-color: #ff4d4f;
+}
+
+.agent-status-busy {
+  background-color: #faad14;
+}
+
+/* 编辑器样式 */
+.editor-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-toolbar {
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editor-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.editor-sidebar {
+  width: 280px;
+  background: #fafafa;
+  border-right: 1px solid #f0f0f0;
+  overflow-y: auto;
+}
+
+.editor-canvas {
+  flex: 1;
+  background: #fff;
+  position: relative;
+  overflow: auto;
+}
+
+.editor-properties {
+  width: 320px;
+  background: #fafafa;
+  border-left: 1px solid #f0f0f0;
+  overflow-y: auto;
+}
+
+/* 组件库样式 */
+.component-library {
+  padding: 16px;
+}
+
+.component-category {
+  margin-bottom: 24px;
+}
+
+.component-category-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #262626;
+}
+
+.component-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 4px;
+}
+
+.component-item:hover {
+  background-color: #f5f5f5;
+}
+
+.component-item-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #1890ff;
+}
+
+.component-item-name {
+  font-size: 14px;
+  color: #262626;
+}
+
+/* 属性面板样式 */
+.property-panel {
+  padding: 16px;
+}
+
+.property-group {
+  margin-bottom: 24px;
+}
+
+.property-group-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #262626;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.property-item {
+  margin-bottom: 16px;
+}
+
+.property-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #595959;
+}
+
+/* 画布样式 */
+.canvas-container {
+  position: relative;
+  background: #fff;
+  min-height: 100%;
+}
+
+.canvas-grid {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.canvas-ruler-horizontal {
+  height: 20px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.canvas-ruler-vertical {
+  width: 20px;
+  background: #f5f5f5;
+  border-right: 1px solid #d9d9d9;
+}
+
+.canvas-component {
+  position: absolute;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.canvas-component:hover {
+  border-color: #1890ff;
+}
+
+.canvas-component.selected {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.canvas-component-handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #1890ff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.canvas-component-handle.nw { top: -4px; left: -4px; cursor: nw-resize; }
+.canvas-component-handle.ne { top: -4px; right: -4px; cursor: ne-resize; }
+.canvas-component-handle.sw { bottom: -4px; left: -4px; cursor: sw-resize; }
+.canvas-component-handle.se { bottom: -4px; right: -4px; cursor: se-resize; }
+.canvas-component-handle.n { top: -4px; left: 50%; transform: translateX(-50%); cursor: n-resize; }
+.canvas-component-handle.s { bottom: -4px; left: 50%; transform: translateX(-50%); cursor: s-resize; }
+.canvas-component-handle.w { top: 50%; left: -4px; transform: translateY(-50%); cursor: w-resize; }
+.canvas-component-handle.e { top: 50%; right: -4px; transform: translateY(-50%); cursor: e-resize; }

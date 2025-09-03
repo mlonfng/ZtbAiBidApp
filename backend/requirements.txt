@@ -1,0 +1,26 @@
+# FastAPI核心框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# 数据库相关
+sqlalchemy>=2.0.0
+
+# 数据验证和设置
+pydantic>=2.5.0
+
+# 文件处理
+python-multipart>=0.0.6
+
+# AI模型集成
+openai>=1.3.0
+httpx>=0.25.0
+
+# 工具库
+python-dotenv>=1.0.0
+
+# 网络请求
+requests>=2.31.0
+
+
+# 数据库迁移
+alembic>=1.13.1

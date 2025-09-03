@@ -1,0 +1,122 @@
+.pageContainer {
+  background-color: #f0f2f5;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.projectHeader {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.projectTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.projectMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 16px;
+  color: #595959;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selectionInfo {
+  margin-bottom: 24px;
+}
+
+.modeCardsContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.modeCard {
+  flex: 1;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.modeCard.selected {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.recommendTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1890ff;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 0 8px 0 8px;
+}
+
+.cardIcon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.cardPrice {
+  text-align: center;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.featureList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #595959;
+}
+
+.currentSelection {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.footerButtons {
+  margin-top: 24px;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+  text-align: right;
+}
+

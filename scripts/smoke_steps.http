@@ -1,0 +1,108 @@
+### ZtbAi Step API Smoke Tests (use with VSCode REST Client or curl)
+
+@base = http://127.0.0.1:9958/api/projects
+@pid = demo_project
+
+### 1) service-mode
+GET {{base}}/{{pid}}/step/service-mode/status
+
+###
+POST {{base}}/{{pid}}/step/service-mode/execute
+Content-Type: application/json
+
+{ "mode": "ai" }
+
+###
+GET {{base}}/{{pid}}/step/service-mode/result
+
+
+### 2) bid-analysis
+GET {{base}}/{{pid}}/step/bid-analysis/status
+
+###
+POST {{base}}/{{pid}}/step/bid-analysis/execute
+Content-Type: application/json
+
+{ "analysis_type": "comprehensive" }
+
+###
+GET {{base}}/{{pid}}/step/bid-analysis/result
+
+
+### 3) file-formatting
+GET {{base}}/{{pid}}/step/file-formatting/status
+
+###
+POST {{base}}/{{pid}}/step/file-formatting/execute
+Content-Type: application/json
+
+{ "sequence": ["detect","clean","extract","html"] }
+
+###
+GET {{base}}/{{pid}}/step/file-formatting/result
+
+
+### 4) material-management
+GET {{base}}/{{pid}}/step/material-management/status
+
+###
+POST {{base}}/{{pid}}/step/material-management/execute
+Content-Type: application/json
+
+{ "action": "refresh" }
+
+###
+GET {{base}}/{{pid}}/step/material-management/result
+
+
+### 5) framework-generation
+GET {{base}}/{{pid}}/step/framework-generation/status
+
+###
+POST {{base}}/{{pid}}/step/framework-generation/execute
+Content-Type: application/json
+
+{ "framework_type": "standard", "template_id": "standard" }
+
+###
+GET {{base}}/{{pid}}/step/framework-generation/result
+
+
+### 6) content-generation
+GET {{base}}/{{pid}}/step/content-generation/status
+
+###
+POST {{base}}/{{pid}}/step/content-generation/execute
+Content-Type: application/json
+
+{ "sections": ["1.1","2.1"] }
+
+###
+GET {{base}}/{{pid}}/step/content-generation/result
+
+
+### 7) format-config
+GET {{base}}/{{pid}}/step/format-config/status
+
+###
+POST {{base}}/{{pid}}/step/format-config/execute
+Content-Type: application/json
+
+{ "template_key": "default" }
+
+###
+GET {{base}}/{{pid}}/step/format-config/result
+
+
+### 8) document-export
+GET {{base}}/{{pid}}/step/document-export/status
+
+###
+POST {{base}}/{{pid}}/step/document-export/execute
+Content-Type: application/json
+
+{ "export_format": "docx" }
+
+###
+GET {{base}}/{{pid}}/step/document-export/result
+

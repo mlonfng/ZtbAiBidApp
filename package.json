@@ -1,0 +1,49 @@
+{
+  "name": "ztbai-bid-app",
+  "version": "1.0.0",
+  "description": "ZtbAi智能投标助手",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && python new_api_server.py",
+    "dev:frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "build:production": "cd frontend && npm run build:production",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && python -m pytest tests/ -v",
+    "test:frontend": "cd frontend && npm test",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && python -m flake8 .",
+    "lint:frontend": "cd frontend && npm run lint",
+    "check:api-compliance": "cd backend && python scripts/check_routes.py && python scripts/error_handling_analyzer.py",
+    "check:routes": "cd backend && python scripts/route_conflict_detector.py",
+    "check:errors": "cd backend && python scripts/error_handling_analyzer.py",
+    "setup:hooks": "cd backend && python scripts/check_routes.py --setup-hook",
+    "validate:step-api": "cd backend && python scripts/validate_step_api.py",
+    "start:desktop": "启动桌面应用.bat",
+    "clean": "rimraf frontend/build backend/__pycache__ backend/**/__pycache__",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+  },
+  "keywords": [
+    "ai",
+    "bidding",
+    "automation",
+    "electron",
+    "fastapi",
+    "react"
+  ],
+  "author": "ZtbAi Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "rimraf": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}

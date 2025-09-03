@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>步骤状态显示测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .step-demo {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e8e8e8;
+            border-radius: 6px;
+        }
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .step-status {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+        .status-pending {
+            background-color: #f5f5f5;
+            color: #8c8c8c;
+            border: 1px solid #d9d9d9;
+        }
+        .status-in-progress {
+            background-color: #e6f7ff;
+            color: #1890ff;
+            border: 1px solid #91d5ff;
+        }
+        .status-completed {
+            background-color: #f6ffed;
+            color: #52c41a;
+            border: 1px solid #b7eb8f;
+        }
+        .status-error {
+            background-color: #fff2f0;
+            color: #ff4d4f;
+            border: 1px solid #ffccc7;
+        }
+        .title-pending { color: #8c8c8c; font-weight: 500; }
+        .title-in-progress { color: #1890ff; font-weight: 600; }
+        .title-completed { color: #52c41a; font-weight: 600; }
+        .title-error { color: #ff4d4f; font-weight: 600; }
+        .description {
+            color: #666;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+        .time-info {
+            color: #999;
+            font-size: 12px;
+            margin-top: 6px;
+        }
+        h1 {
+            color: #1890ff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #1890ff;
+            padding-bottom: 8px;
+        }
+        .success-message {
+            background-color: #f6ffed;
+            border: 1px solid #b7eb8f;
+            color: #52c41a;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 步骤状态显示修复验证</h1>
+        
+        <div class="success-message">
+            ✅ 修复完成！以下是新的步骤状态显示效果演示：
+        </div>
+
+        <h2>修复内容总结</h2>
+        <ul>
+            <li><strong>API错误处理</strong>：完善了fetchProjectProgress的错误处理机制</li>
+            <li><strong>状态颜色区分</strong>：实现了步骤标题的颜色区分（灰色-待开始，蓝色-进行中，绿色-完成，红色-错误）</li>
+            <li><strong>状态标签显示</strong>：在步骤下方添加了明显的状态标签</li>
+            <li><strong>字体优化</strong>：改进了字体大小和间距，解决了遮挡问题</li>
+            <li><strong>错误提示</strong>：添加了用户友好的错误提示和重试机制</li>
+        </ul>
+
+        <h2>步骤状态显示效果演示</h2>
+
+        <div class="step-demo">
+            <div class="step-title title-pending">服务模式选择</div>
+            <div class="step-status status-pending">待开始</div>
+            <div class="description">选择免费模式、AI智能模式或人工模式</div>
+        </div>
+
+        <div class="step-demo">
+            <div class="step-title title-in-progress">招标文件分析</div>
+            <div class="step-status status-in-progress">进行中</div>
+            <div class="description">智能分析招标文件，提取关键信息</div>
+            <div class="time-info">开始: 2025/8/12</div>
+        </div>
+
+        <div class="step-demo">
+            <div class="step-title title-completed">框架生成</div>
+            <div class="step-status status-completed">已完成</div>
+            <div class="description">投标文件框架生成、模板管理</div>
+            <div class="time-info">完成: 2025/8/12</div>
+        </div>
+
+        <div class="step-demo">
+            <div class="step-title title-error">内容生成</div>
+            <div class="step-status status-error">错误</div>
+            <div class="description">技术方案、商务方案智能生成</div>
+            <div class="time-info">错误: 生成失败，请重试</div>
+        </div>
+
+        <h2>主要改进点</h2>
+        <ol>
+            <li><strong>视觉清晰度</strong>：步骤标题使用明确的颜色区分不同状态</li>
+            <li><strong>状态标签</strong>：每个步骤下方都有清晰的状态标签</li>
+            <li><strong>字体大小</strong>：优化了字体大小，避免遮挡问题</li>
+            <li><strong>错误处理</strong>：API调用失败时会显示友好的错误提示</li>
+            <li><strong>重试机制</strong>：用户可以点击重试按钮重新加载状态</li>
+        </ol>
+
+        <p style="text-align: center; margin-top: 40px; color: #666;">
+            请在实际项目页面中验证修复效果！
+        </p>
+    </div>
+</body>
+</html>
