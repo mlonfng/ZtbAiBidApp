@@ -4,7 +4,7 @@ status: backlog
 created: 2025-09-03T04:54:11Z
 progress: 0%
 prd: .claude/prds/project-optimization.md
-github: [Will be updated when synced to GitHub]
+github: https://github.com/mlonfng/ZtbAiBidApp/issues/2
 ---
 
 # Epic: project-optimization
